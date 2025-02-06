@@ -287,7 +287,7 @@
                 </ul>
               </div>
             </div>
-            <div class="header-btns ml-auto ml-lg-0"><a class="btn btn--primary btn-header hvr-bounce-to-left" href="#">Get Started</a></div>
+            <div class="header-btns ml-auto ml-lg-0"><a class="btn btn--primary btn-header hvr-bounce-to-left" href="#" onclick="recotap.trackConversion(generateRandomEvent())">Get Started</a></div>
             <button class="navbar-toggler btn-close-off-canvas" type="button" data-toggle="collapse" data-target="#mobile-menu" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle navigation">
               <i class="icon icon-simple-remove icon-close"></i>
               <i class="icon icon-menu-34 icon-burger"></i>
@@ -709,6 +709,62 @@
   <script src="plugins/slick/slick.min.js"></script>
   <!-- Activation Script -->
   <script src="js/custom.js"></script>
+
+
+  <script type="text/javascript">
+
+    function generateRandomEvent() {
+      // List of possible events
+    const events = ['download', 'purchase', 'signup', 'login', 'pageview', 'click', 'form_submit', 'contact_request'];
+    
+    // List of common company domains
+    const companies = [
+        { name: 'Wells Fargo', domain: 'wellsfargo.com' },
+        { name: 'Microsoft', domain: 'microsoft.com' },
+        { name: 'Google', domain: 'google.com' },
+        { name: 'Apple', domain: 'apple.com' },
+        { name: 'Amazon', domain: 'amazon.com' },
+        { name: 'IBM', domain: 'ibm.com' },
+        { name: 'Intel', domain: 'intel.com' },
+        { name: 'Cisco', domain: 'cisco.com' },
+        { name: 'Oracle', domain: 'oracle.com' },
+        { name: 'Deloitte', domain: 'deloitte.com' }
+    ];
+
+    // List of common first names
+    const firstNames = ['John', 'Jane', 'Michael', 'Sarah', 'David', 'Emma', 'James', 'Emily', 'Robert', 'Lisa'];
+    
+    // List of common last names
+    const lastNames = ['Smith', 'Johnson', 'Williams', 'Brown', 'Jones', 'Garcia', 'Miller', 'Davis', 'Rodriguez', 'Martinez'];
+
+
+      // Generate random selections
+      const randomEvent = events[Math.floor(Math.random() * events.length)];
+      const randomCompany = companies[Math.floor(Math.random() * companies.length)];
+      const randomFirstName = firstNames[Math.floor(Math.random() * firstNames.length)];
+      const randomLastName = lastNames[Math.floor(Math.random() * lastNames.length)];
+
+      // Generate random phone number in format: (XXX) XXX-XXXX
+      const areaCode = Math.floor(Math.random() * 900) + 100; // 100-999
+      const prefix = Math.floor(Math.random() * 900) + 100;   // 100-999
+      const lineNum = Math.floor(Math.random() * 9000) + 1000; // 1000-9999
+      const phoneNumber = `(${areaCode}) ${prefix}-${lineNum}`;
+
+      // Generate email using first initial + last name format
+      const email = `${randomFirstName.toLowerCase()[0]}${randomLastName.toLowerCase()}@${randomCompany.domain}`;
+
+      return {
+        eventName: randomEvent,
+        data: {
+          email: email,
+          companyName: randomCompany.name,
+          phoneNumber: phoneNumber
+        }
+      };
+    }
+  </script>
+
+  
 </body>
 
 
