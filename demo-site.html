@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Financial Services Landing</title>
+  <style>
+    :root{
+      --brand:#1b6bff;
+      --brand-dark:#0e3ea8;
+      --ink:#0e1320;
+      --muted:#5d6472;
+      --bg:#f7f9fc;
+      --card:#ffffff;
+      --accent:#ffb120;
+      --shadow: 0 10px 30px rgba(16,23,40,.08);
+      --radius: 16px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial, sans-serif;color:var(--ink);background:var(--bg);line-height:1.5;}
+    a{color:var(--brand);text-decoration:none}
+    .container{width:min(1160px, 92%); margin-inline:auto;}
+    header{background:#0f1c4d;}
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0; color:#fff}
+    .logo{font-weight:800; letter-spacing:.2px}
+    .btn{padding:10px 14px; border-radius:12px; font-weight:600; cursor:pointer; border:1px solid transparent;}
+    .btn-primary{background:#fff; color:#0f1c4d;}
+    .btn-ghost{color:#dbe6ff; border:1px solid rgba(255,255,255,.2); background:transparent}
+    .hero{background:linear-gradient(180deg,#0f1c4d 0%, #11246b 100%);color:#fff;}
+    .hero-wrap{display:grid; grid-template-columns: 1.2fr .8fr; gap:40px; padding:64px 0;}
+    @media (max-width: 900px){.hero-wrap{grid-template-columns:1fr; padding:44px 0}}
+    h1{font-size:42px; line-height:1.1; margin:0 0 16px}
+    .hero p{color:#dbe5ff; margin:0 0 22px; font-size:18px}
+    .cta-row{display:flex; gap:12px; flex-wrap:wrap}
+    .chip{margin-top:8px; background:rgba(255,255,255,.1); padding:8px 10px; border-radius:10px; font-size:13px}
+    .viz{display:flex;align-items:center;justify-content:center;background:#2f6bff;border-radius:20px;height:320px;}
+    .viz img{max-width:60%;height:auto;}
+    .who{background:var(--card); box-shadow:var(--shadow); border-radius:var(--radius); padding:28px; margin:-26px auto 24px;}
+    .section-title{text-align:center;font-size:22px;margin-bottom:18px}
+    .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
+    @media (max-width: 940px){.grid-3{grid-template-columns:1fr}}
+    .card{background:var(--card); border-radius:16px; padding:18px; box-shadow:var(--shadow);}
+    .card h3{margin:0 0 6px; font-size:16px}
+    .card p{margin:0; color:var(--muted); font-size:14px}
+    .case{display:grid; grid-template-columns:1fr 1.1fr; gap:26px;}
+    @media (max-width: 940px){.case{grid-template-columns:1fr}}
+    .mock{background:#dfeaff;border-radius:18px; padding:18px;min-height:260px;}
+    .banner{display:grid; grid-template-columns:1fr 1fr; gap:30px;align-items:center;background:var(--card); border-radius:20px; padding:26px; box-shadow:var(--shadow)}
+    @media (max-width: 940px){.banner{grid-template-columns:1fr}}
+    footer{background:#0f1c4d; color:#cdd6ff; margin-top:40px; padding:36px 0; text-align:center;}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo">Company</div>
+      <div>
+        <a class="btn btn-ghost" href="#what">Features</a>
+        <a class="btn btn-ghost" href="#case">Case Study</a>
+        <a class="btn btn-primary" href="#demo">Start Free Trial</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-wrap">
+      <div>
+        <h1>Hey Apex Capital, convert “near me” searches into real clients.</h1>
+        <p>Control your local visibility, manage listings, and drive walk-ins without extra ad spend.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#demo">Start My Free Trial</a>
+          <a class="btn btn-ghost" href="#talk">Talk to Us</a>
+        </div>
+        <div class="chip">Trusted by financial brands nationwide</div>
+      </div>
+      <div class="viz">
+        <img src="image/png/l1-logo.png" alt="Temp Logo">
+      </div>
+    </div>
+  </section>
+
+  <div class="container who" id="talk">
+    <h2>Hey Apex Capital,</h2>
+    <p>You manage growth across multiple branches. Customers still search online before visiting a financial provider. Our hyperlocal tools help you convert those searches into calls and store visits.</p>
+    <a class="btn btn-primary" href="#demo">Talk to Us</a>
+  </div>
+
+  <section id="what">
+    <div class="container">
+      <h2 class="section-title">What do we do?</h2>
+      <div class="grid-3">
+        <div class="card"><h3>Branch Listings</h3><p>Update branch details everywhere in one click.</p></div>
+        <div class="card"><h3>Local Branding</h3><p>Engage fast with customers and stay top of mind.</p></div>
+        <div class="card"><h3>Google Maps Rank</h3><p>Appear in the top 3 with consistent data hygiene.</p></div>
+        <div class="card"><h3>Calls & Visits</h3><p>Make it easy for clients to reach or navigate to you.</p></div>
+        <div class="card"><h3>Review Insights</h3><p>AI analysis to measure sentiment and CX per branch.</p></div>
+        <div class="card"><h3>Consistent Data</h3><p>Keep details synced across directories and channels.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="case">
+    <div class="container">
+      <h2 class="section-title">Case Study · Financial Services</h2>
+      <div class="case">
+        <div class="mock"></div>
+        <div>
+          <h3>95% increase in hyperlocal traffic</h3>
+          <p>We optimized 200+ branch listings, fixed broken data, and boosted review responses.</p>
+          <ul>
+            <li>Map pack placements doubled</li>
+            <li>Calls up 60% and visits up 70%</li>
+            <li>Full audit trail for compliance</li>
+          </ul>
+          <a class="btn btn-primary" href="#demo">View Full Case Study</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="demo">
+    <div class="container banner">
+      <div>
+        <h3>Hyperlocal Marketing Software</h3>
+        <p>Turn nearby searches into customers—without ads.</p>
+        <a class="btn btn-primary" href="#talk">Request a Demo</a>
+      </div>
+      <div><img src="https://via.placeholder.com/300x200.png?text=Demo+Image" alt="Demo"></div>
+    </div>
+  </section>
+
+  <footer>
+    <div>© 2025 Company. All rights reserved.</div>
+  </footer>
+</body>
+</html>
